@@ -1,0 +1,47 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements">
+    <ui:Style src="project://database/Assets/UI/Stylesheets/GameHUD.uss" />
+    <ui:VisualElement name="root-container" class="root-container">
+        <!-- HUD Layer -->
+        <ui:VisualElement name="hud-container" class="hud-container">
+            <ui:Label name="hud-score" class="score-label" text="0" />
+            <ui:Button name="btn-pause" class="pause-btn" text="||" />
+        </ui:VisualElement>
+
+        <!-- Ready Overlay -->
+        <ui:VisualElement name="panel-ready" class="modal-backdrop ready-container">
+            <ui:VisualElement class="modal-card">
+                <ui:Label name="lbl-ready-title" class="title-label" text="GET READY" />
+                <ui:Label name="lbl-ready-hint" class="hint-label" text="Tap or Press Space to Flap" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+
+        <!-- Pause Modal -->
+        <ui:VisualElement name="panel-pause" class="modal-backdrop pause-modal">
+            <ui:VisualElement class="modal-card">
+                <ui:Label name="lbl-pause-title" class="title-label" text="PAUSED" />
+                <ui:Button name="btn-resume" class="btn-action resume-btn" text="RESUME" />
+                <ui:Button name="btn-restart-pause" class="btn-action pause-restart-btn" text="RESTART" />
+                <ui:Button name="btn-quit" class="btn-action btn-danger quit-btn" text="QUIT" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+
+        <!-- Game Over Modal -->
+        <ui:VisualElement name="panel-gameover" class="modal-backdrop gameover-modal">
+            <ui:VisualElement class="modal-card">
+                <ui:Label name="lbl-gameover-title" class="title-label title-danger" text="GAME OVER" />
+                <ui:VisualElement name="box-scoreboard" class="scoreboard">
+                    <ui:VisualElement class="score-row">
+                        <ui:Label name="lbl-final-score-title" class="score-row-title" text="SCORE" />
+                        <ui:Label name="lbl-final-score" class="final-score-label" text="0" />
+                    </ui:VisualElement>
+                    <ui:VisualElement class="score-row">
+                        <ui:Label name="lbl-high-score-title" class="score-row-title" text="BEST" />
+                        <ui:Label name="lbl-high-score" class="best-score-label" text="0" />
+                    </ui:VisualElement>
+                    <ui:Label name="badge-new-best" class="badge-new-best" text="NEW BEST!" />
+                </ui:VisualElement>
+                <ui:Button name="btn-restart" class="btn-action restart-btn" text="PLAY AGAIN" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

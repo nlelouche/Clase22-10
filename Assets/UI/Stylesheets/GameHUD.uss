@@ -1,0 +1,218 @@
+/* Flappy Bird UI Stylesheet */
+
+:root {
+    --color-primary: #2ecc71;
+    --color-primary-hover: #27ae60;
+    --color-primary-active: #1e8449;
+    --color-danger: #e74c3c;
+    --color-danger-hover: #c0392b;
+    --color-gold: #f1c40f;
+    --color-card-bg: #2c3e50;
+    --color-scoreboard-bg: #ecf0f1;
+    --color-text-dark: #2c3e50;
+    --color-text-light: #ffffff;
+}
+
+.root-container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* --- HUD Header Layer --- */
+.hud-container,
+#hud-container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 48px;
+}
+
+.score-label,
+#hud-score {
+    font-size: 80px;
+    color: var(--color-text-light);
+    -unity-font-style: bold;
+    -unity-text-align: middle-center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.pause-btn,
+#btn-pause {
+    position: absolute;
+    right: 32px;
+    top: 40px;
+    width: 72px;
+    height: 72px;
+    border-radius: 16px;
+    background-color: rgba(255, 255, 255, 0.25);
+    border-width: 2px;
+    border-color: #ffffff;
+    color: var(--color-text-light);
+    font-size: 32px;
+    -unity-font-style: bold;
+    -unity-text-align: middle-center;
+    transition-duration: 0.15s;
+}
+
+.pause-btn:hover,
+#btn-pause:hover {
+    background-color: rgba(255, 255, 255, 0.45);
+}
+
+.pause-btn:active,
+#btn-pause:active {
+    background-color: rgba(255, 255, 255, 0.15);
+    scale: 0.95 0.95;
+}
+
+/* --- Modal Overlays & Backdrops --- */
+.modal-backdrop,
+.ready-container,
+.pause-modal,
+.gameover-modal,
+#panel-ready,
+#panel-pause,
+#panel-gameover {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+}
+
+#panel-ready,
+.ready-container {
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+.modal-card {
+    width: 82%;
+    max-width: 440px;
+    background-color: var(--color-card-bg);
+    border-radius: 24px;
+    padding: 32px 24px;
+    align-items: center;
+    border-width: 3px;
+    border-color: #34495e;
+}
+
+.title-label {
+    font-size: 44px;
+    color: var(--color-gold);
+    -unity-font-style: bold;
+    -unity-text-align: middle-center;
+    margin-bottom: 24px;
+}
+
+.title-danger {
+    color: var(--color-danger);
+}
+
+.hint-label {
+    font-size: 22px;
+    color: #ecf0f1;
+    -unity-font-style: bold;
+    -unity-text-align: middle-center;
+    white-space: normal;
+    margin-top: 8px;
+}
+
+/* --- Scoreboard & Details --- */
+.scoreboard,
+#box-scoreboard {
+    width: 100%;
+    background-color: var(--color-scoreboard-bg);
+    border-radius: 16px;
+    padding: 20px 24px;
+    margin-bottom: 20px;
+    border-width: 2px;
+    border-color: #bdc3c7;
+}
+
+.score-row {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.score-row-title {
+    font-size: 24px;
+    color: #7f8c8d;
+    -unity-font-style: bold;
+}
+
+.final-score-label,
+.best-score-label,
+#lbl-final-score,
+#lbl-high-score {
+    font-size: 36px;
+    color: var(--color-text-dark);
+    -unity-font-style: bold;
+}
+
+.badge-new-best,
+#badge-new-best {
+    background-color: var(--color-gold);
+    color: #ffffff;
+    font-size: 18px;
+    -unity-font-style: bold;
+    -unity-text-align: middle-center;
+    padding: 6px 14px;
+    border-radius: 8px;
+    align-self: center;
+    margin-top: 6px;
+}
+
+/* --- Action Buttons --- */
+.btn-action {
+    width: 100%;
+    min-height: 64px;
+    border-radius: 16px;
+    background-color: var(--color-primary);
+    color: var(--color-text-light);
+    font-size: 26px;
+    -unity-font-style: bold;
+    -unity-text-align: middle-center;
+    border-width: 0px;
+    margin-top: 12px;
+    padding: 12px 16px;
+    transition-duration: 0.15s;
+}
+
+.btn-action:hover {
+    background-color: var(--color-primary-hover);
+}
+
+.btn-action:active {
+    background-color: var(--color-primary-active);
+    scale: 0.97 0.97;
+}
+
+.btn-danger {
+    background-color: var(--color-danger);
+}
+
+.btn-danger:hover {
+    background-color: var(--color-danger-hover);
+}
+
+.btn-danger:active {
+    background-color: #962d22;
+    scale: 0.97 0.97;
+}
